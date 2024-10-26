@@ -98,7 +98,6 @@ modules:
   - type: systemd
     system:
       enabled:
-        - greetd-workaround.service
         - greetd-boot.service
         - greetd.service
 
