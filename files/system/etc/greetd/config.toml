@@ -1,0 +1,6 @@
+[terminal]
+vt = 1
+
+[default_session]
+command = "Hyprland --config /usr/share/guacho/greetd-hyprland.conf"
+user = "greetd"

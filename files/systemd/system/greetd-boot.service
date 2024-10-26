@@ -1,0 +1,11 @@
+[Unit]
+Description=Create greetd user on system boot
+Before=greetd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/guacho/greetd-useradd
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
