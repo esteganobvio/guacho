@@ -1,0 +1,9 @@
+---
+name: guacho-nvidia
+description: Guacho nvidia
+
+base-image: ghcr.io/ublue-os/base-nvidia
+image-version: 41
+
+modules:
+  - from-file: common/common.yml
