@@ -17,54 +17,54 @@ modules:
     keys:
       - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     install:
-      - nerd-fonts
+      - adw-gtk3-theme
+      - brave-browser
+      - btop
+      - celluloid
+      - cliphist
+      - distrobox
+      - dunst
+      - fastfetch
+      - gammastep
+      - gammastep-indicator
+      - gnome-disk-utility
+      - gnome-software
+      - gparted
+      - greetd
+      - gtkgreet
+      - htop
+      - hypridle
       - hyprland
       - hyprland-devel
       - hyprlock
-      - hypridle
       - hyprpaper
       - hyprpolkitagent
       - hyprprop
-      - gammastep
-      - gammastep-indicator
       - hyprutils
-      - waybar-git
-      - rofi-wayland
-      - wezterm
-      - distrobox
-      - nautilus
-      - gnome-software
-      - htop
-      - trash-cli
-      - wl-clipboard
-      - cliphist
-      - pavucontrol
-      - mpv
-      - pipx
-      - network-manager-applet
-      - neovim
-      - gnome-keyring
-      - gnome-disk-utility
-      - gparted
-      - power-profiles-daemon
-      - zsh
-      - brave-browser
-      - celluloid
-      - fastfetch
-      - dunst
-      - syncthing
       - keepassxc
-      - seahorse
-      - adw-gtk3-theme
-      - paper-icon-theme
-      - libvirt-daemon-kvm
-      - qemu-kvm
       - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+      - mpv
+      - nautilus
+      - neovim
+      - nerd-fonts
+      - network-manager-applet
+      - paper-icon-theme
+      - pavucontrol
+      - pipx
+      - power-profiles-daemon
+      - qemu-kvm
+      - rofi-wayland
+      - seahorse
+      - syncthing
+      - trash-cli
       - virt-install
       - virt-manager
       - virt-viewer
-      - greetd
-      - gtkgreet
+      - waybar-git
+      - wezterm
+      - wl-clipboard
+      - zsh
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -102,7 +102,7 @@ modules:
       # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
-      remove:
+      remove: []
       # - org.gnome.eog
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
