@@ -49,13 +49,13 @@ modules:
       - neovim
       - nerd-fonts
       - network-manager-applet
+      - nwg-look
       - paper-icon-theme
       - pavucontrol
       - pipx
       - power-profiles-daemon
       - qemu-kvm
       - rofi-wayland
-      - seahorse
       - syncthing
       - trash-cli
       - virt-install
