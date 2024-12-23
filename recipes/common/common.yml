@@ -13,6 +13,10 @@ modules:
       - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
     keys:
       - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+    replace:
+      - from-repo: fedora-multimedia
+        packages:
+          - mesa-libgbm-devel
     install:
       - adw-gtk3-theme
       - brave-browser
@@ -33,6 +37,7 @@ modules:
       - hyprpaper
       - hyprutils
       - keepassxc
+      - mesa-libgbm-devel
       - mpv
       - neovim
       - nerd-fonts
