@@ -27,9 +27,6 @@ modules:
       - fastfetch
       - gammastep
       - gammastep-indicator
-      - gnome-disk-utility
-      - gnome-software
-      - gparted
       - greetd
       - gtkgreet
       - htop
@@ -42,8 +39,6 @@ modules:
       - hyprprop
       - hyprutils
       - keepassxc
-      - libvirt-daemon-config-network
-      - libvirt-daemon-kvm
       - mpv
       - nautilus
       - neovim
@@ -52,7 +47,6 @@ modules:
       - nwg-look
       - paper-icon-theme
       - pavucontrol
-      - pipx
       - power-profiles-daemon
       - qemu-kvm
       - rofi-wayland
