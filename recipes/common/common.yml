@@ -39,9 +39,9 @@ modules:
       - neovim
       - nerd-fonts
       - network-manager-applet
-      - nwg-look
       - paper-icon-theme
       - pavucontrol
+      - polkit
       - power-profiles-daemon
       - qemu-kvm
       - rofi-wayland
@@ -50,6 +50,7 @@ modules:
       - waybar
       - wezterm
       - wl-clipboard
+      - xfce-polkit
       - zsh
     remove:
       # example: removing firefox (in favor of the flatpak)
