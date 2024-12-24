@@ -120,6 +120,7 @@ modules:
       - NetworkManager-openconnect-gnome
       - bluez
       - bluez-tools
+      - blueman
       - firewall-config
     optfix:
       - brave.com
