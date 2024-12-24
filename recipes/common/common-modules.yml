@@ -1,0 +1,187 @@
+modules:
+  - type: containerfile
+    snippets:
+      - COPY --from=ghcr.io/ublue-os/akmods:main-41 /rpms /tmp/rpms
+      - RUN find /tmp/rpms
+      - RUN rpm -q ublue-os-akmods-addons || rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods-addons*.rpm
+  - type: containerfile
+    snippets:
+      - COPY --from=ghcr.io/ublue-os/main-kernel:41 /tmp/rpms /tmp/rpms/kernel
+  - type: script
+    scripts:
+      - installsignedkernel.sh
+
+  - type: containerfile
+    snippets:
+      - RUN rpm-ostree install just powerstat
+      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-udev-rules.noarch.rpm /
+      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-update-services.noarch.rpm /
+      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-signing.noarch.rpm /
+      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-luks.noarch.rpm /
+      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-just.noarch.rpm /
+      - RUN rpm -ivh /ublue-os-udev-rules.noarch.rpm
+      - RUN rpm -ivh /ublue-os-update-services.noarch.rpm
+      - RUN rpm -ivh /ublue-os-signing.noarch.rpm
+      - RUN rpm -ivh /ublue-os-luks.noarch.rpm
+      - RUN rpm -ivh /ublue-os-just.noarch.rpm
+
+  - type: script
+    scripts:
+      - installandroidudev.sh
+      - installrpmfusion.sh
+      - ensureautoupdates.sh
+      - fixupstreamicdloaderbug.sh
+
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: rpm-ostree
+    repos:
+      # wezterm
+      - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
+      # nerd-fonts fallback
+      - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
+      # Brave browser
+      - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+    keys:
+      - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+    install:
+      # greet
+      - greetd
+      - gtkgreet
+      # browser
+      - brave-browser
+      # themes and fonts
+      - nerd-fonts
+      - paper-icon-theme
+      - adw-gtk3-theme
+      # environment
+      - polkit
+      - power-profiles-daemon
+      - syncthing
+      - trash-cli
+      - xfce-polkit
+      - fprintd-pam
+      - xdg-user-dirs
+      - dbus-tools
+      - dbus-daemon
+      - playerctl
+      - qt5-qtwayland
+      - qt6-qtwayland
+      - vulkan-validation-layers
+      - vulkan-tools
+      - ddcutil
+      - openssl
+      - just
+      - alsa-firmware
+      - distrobox
+      - neovim
+      - zsh
+      - fastfetch
+      - btop
+      # gui
+      - rofi-wayland
+      - wlr-randr
+      - gammastep
+      - gammastep-indicator
+      - brightnessctl
+      - kanshi
+      - dunst
+      - hyprland
+      - hyprland-devel
+      - hypridle
+      - hyprlock
+      - hyprpaper
+      - hyprutils
+      - keepassxc
+      - mpv
+      - celluloid
+      - waybar
+      - wezterm
+      - pavucontrol
+      - wl-clipboard
+      # sound
+      - wireplumber
+      - pipewire
+      - pamixer
+      - pulseaudio-utils
+      # networking
+      - network-manager-applet
+      - NetworkManager-openvpn
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-openconnect
+      - NetworkManager-openconnect-gnome
+      - bluez
+      - bluez-tools
+      - firewall-config
+    optfix:
+      - brave.com
+
+  - type: script
+    scripts:
+      - installproprietarypackages.sh
+
+  - type: rpm-ostree
+    install:
+      - heif-pixbuf-loader
+      - ffmpeg
+      - ffmpeg-libs
+      - ffmpegthumbnailer
+      - pipewire-libs-extra
+      - libfdk-aac
+      - gstreamer1-plugins-bad
+      - gstreamer1-plugins-ugly 
+    remove:
+      - gstreamer1-plugins-bad-free
+      - gstreamer1-plugins-bad-free-libs
+      - gstreamer1-plugins-ugly-free
+      - fdk-aac-free
+      - ffmpeg-free
+      - libavcodec-free  
+      - libavdevice-free
+      - libavfilter-free
+      - libavformat-free  
+      - libavutil-free  
+      - libpostproc-free  
+      - libswresample-free  
+      - libswscale-free  
+
+  - type: script
+    scripts:
+      - removeunusedrepos.sh
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - FiraMono
+
+  - type: systemd
+    system:
+      enabled:
+        - greetd-workaround.service
+        - greetd-boot.service
+        - greetd.service
+
+  - type: script
+    snippets:
+      - "ln -sf /usr/lib/opt/brave.com/brave/brave-browser /usr/bin/brave-browser-stable"
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - it.mijorus.gearlever
+      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
+      # only normal flatpak applications are (like Floorp Lightning web browser in this example).
+      # Installing different branches of the same Flatpak is not supported.
+      remove: []
+      # - org.gnome.eog
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
