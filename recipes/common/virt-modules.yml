@@ -12,4 +12,5 @@ modules:
   - type: systemd
     system:
       enabled:
+        - libvirt-workaround.service
         - libvirtd.service
