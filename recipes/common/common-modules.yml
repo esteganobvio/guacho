@@ -109,6 +109,9 @@ modules:
       - cliphist
       - hyprpolkitagent
       - hyprshot
+      #
+      - nautilus
+      - gnome-software
     optfix:
       - brave.com
 
