@@ -54,6 +54,7 @@ modules:
       - brave-browser
       # themes and fonts
       - nerd-fonts
+      - jetbrains-mono-fonts-all
       - paper-icon-theme
       - adw-gtk3-theme
       # environment
