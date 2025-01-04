@@ -60,6 +60,7 @@ modules:
       # environment
       - polkit
       - power-profiles-daemon
+      - intel-undervolt
       - syncthing
       - trash-cli
       - fprintd-pam
