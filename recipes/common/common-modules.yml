@@ -94,6 +94,7 @@ modules:
       - wezterm
       - pavucontrol
       - wl-clipboard
+      - yaru-theme
       # sound
       - wireplumber
       - pipewire
@@ -110,6 +111,7 @@ modules:
       - cliphist
       - hyprpolkitagent
       - hyprshot
+      - nwg-look
       #
       - nautilus
       - gnome-software
