@@ -148,10 +148,6 @@ modules:
       - libswresample-free
       - libswscale-free
 
-  - type: script
-    scripts:
-      - removeunusedrepos.sh
-
   - type: fonts
     fonts:
       nerd-fonts:

@@ -10,4 +10,3 @@ modules:
   - from-file: common/networking-modules.yml
   - from-file: common/virt-modules.yml
   - from-file: common/greetd-modules.yml
-
