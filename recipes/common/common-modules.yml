@@ -28,7 +28,6 @@ modules:
   - type: script
     scripts:
       - installandroidudev.sh
-      - installrpmfusion.sh
       - ensureautoupdates.sh
       - fixupstreamicdloaderbug.sh
 
@@ -36,6 +35,10 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: bling
+    install: 
+      - rpmfusion
 
   - type: rpm-ostree
     repos:
@@ -118,41 +121,6 @@ modules:
       - gnome-software
     optfix:
       - brave.com
-
-  - type: script
-    scripts:
-      - installproprietarypackages.sh
-
-  - type: rpm-ostree
-    install:
-      - heif-pixbuf-loader
-      - ffmpeg
-      - ffmpeg-libs
-      - ffmpegthumbnailer
-      - pipewire-libs-extra
-      - libfdk-aac
-      - gstreamer1-plugins-bad
-      - gstreamer1-plugins-ugly 
-    remove:
-      - gstreamer1-plugins-bad-free
-      - gstreamer1-plugins-bad-free-libs
-      - gstreamer1-plugins-ugly-free
-      - fdk-aac-free
-      - ffmpeg-free
-      - libavcodec-free
-      - libavdevice-free
-      - libavfilter-free
-      - libavformat-free
-      - libavutil-free
-      - libpostproc-free
-      - libswresample-free
-      - libswscale-free
-
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - FiraCode
-        - FiraMono
 
   - type: script
     snippets:
