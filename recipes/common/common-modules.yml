@@ -64,8 +64,15 @@ modules:
       - polkit
       - power-profiles-daemon
       - intel-undervolt
+      - intel-media-driver
+      - libva-intel-driver
+      - mesa-va-drivers-freeworld
+      - mesa-vdpau-drivers-freeworld
       - syncthing
       - trash-cli
+      - ffmpeg
+      - ffmpegthumbnailer
+      - libavcodec-freeworld
       - fprintd-pam
       - xdg-user-dirs
       - dbus-tools
@@ -84,6 +91,7 @@ modules:
       - zsh
       - fastfetch
       - btop
+      - libappindicator-gtk3
       # gui
       - rofi-wayland
       - wlr-randr
@@ -116,9 +124,21 @@ modules:
       - hyprpolkitagent
       - hyprshot
       - nwg-look
+      - wlogout
       #
       - nautilus
       - gnome-software
+    remove:
+      - ffmpeg-free
+      - libavcodec-free
+      - libavfilter-free
+      - libavformat-free
+      - libpostproc-free
+      - libswscale-free
+      - libswresample-free
+      - libavdevice-free
+      - libavutil-free
+      - mesa-va-drivers
     optfix:
       - brave.com
 
