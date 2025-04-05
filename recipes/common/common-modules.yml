@@ -2,11 +2,9 @@ modules:
   - type: containerfile
     snippets:
       - COPY --from=ghcr.io/ublue-os/akmods:main-41 /rpms /tmp/rpms
+      - COPY --from=ghcr.io/ublue-os/akmods:main-41 /kernel-rpms /tmp/rpms/kernel
       - RUN find /tmp/rpms
       - RUN rpm -q ublue-os-akmods-addons || rpm-ostree install /tmp/rpms/ublue-os/ublue-os-akmods-addons*.rpm
-  - type: containerfile
-    snippets:
-      - COPY --from=ghcr.io/ublue-os/main-kernel:41 /tmp/rpms /tmp/rpms/kernel
   - type: script
     scripts:
       - installsignedkernel.sh
@@ -92,6 +90,7 @@ modules:
       - fastfetch
       - btop
       - libappindicator-gtk3
+      - fzf
       # gui
       - rofi-wayland
       - wlr-randr
@@ -139,6 +138,8 @@ modules:
       - libavdevice-free
       - libavutil-free
       - mesa-va-drivers
+      - firefox
+      - firefox-langpacks
     optfix:
       - brave.com
 
