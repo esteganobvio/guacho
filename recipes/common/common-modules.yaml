@@ -49,6 +49,8 @@ modules:
       - openssh-askpass
       - wireguard-tools
       - fzf
+      - polkit
+      - xfce-polkit
       # user tools
       - neovim
       - wezterm
@@ -65,6 +67,7 @@ modules:
       - dunst
       - pavucontrol
       - wl-clipboard
+      - clipman
       - wlogout
     remove:
       - firefox
