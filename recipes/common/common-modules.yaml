@@ -25,7 +25,10 @@ modules:
       - jetbrains-mono-fonts-all
       - paper-icon-theme
       - adw-gtk3-theme
-      - yaru-theme
+      - yaru-gtk2-theme
+      - yaru-gtk3-theme
+      - yaru-gtk4-theme
+      - yaru-icon-theme
       - rsms-inter-fonts
       - rsms-inter-vf-fonts
       # system tools
@@ -45,10 +48,24 @@ modules:
       - syncthing
       - openssh-askpass
       - wireguard-tools
+      - fzf
       # user tools
       - neovim
-      - wl-clipboard
       - wezterm
+      - mpv
+      - playerctl
+      - fastfetch
+      # common gui tools
+      - rofi-wayland
+      - wlr-randr
+      - gammastep
+      - gammastep-indicator
+      - brightnessctl
+      - kanshi
+      - dunst
+      - pavucontrol
+      - wl-clipboard
+      - wlogout
     remove:
       - firefox
       - firefox-langpacks
