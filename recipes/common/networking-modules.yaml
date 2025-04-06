@@ -1,0 +1,14 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - iwd
+      - network-manager-applet
+      - NetworkManager-openvpn
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-openconnect
+      - NetworkManager-openconnect-gnome
+      - bluez
+      - bluez-tools
+      - blueman
+      - firewall-config
+

@@ -1,0 +1,75 @@
+---
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+
+  - type: rpm-ostree
+    repos:
+       # ghostty
+       - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
+       # wezterm
+       - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
+       # nerd-fonts fallback
+       - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
+       # Brave browser
+       - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+    keys:
+       - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+    install:
+      # browser
+      - brave-browser
+      # themes and fonts
+      - nerd-fonts
+      - jetbrains-mono-fonts-all
+      - paper-icon-theme
+      - adw-gtk3-theme
+      - yaru-theme
+      - rsms-inter-fonts
+      - rsms-inter-vf-fonts
+      # system tools
+      - bootc
+      - borgbackup
+      - ddcutil
+      - intel-undervolt
+      - fastfetch
+      - btop
+      - gcc
+      - git-credential-libsecret
+      - lm_sensors
+      - make
+      - usbmuxd
+      - util-linux
+      - zsh
+      - syncthing
+      - openssh-askpass
+      - wireguard-tools
+      # user tools
+      - neovim
+      - wl-clipboard
+      - wezterm
+    remove:
+      - firefox
+      - firefox-langpacks
+    optfix:
+      - brave.com
+
+  - type: script
+    snippets:
+      - "ln -sf /usr/lib/opt/brave.com/brave/brave-browser /usr/bin/brave-browser-stable"
+
+  - type: default-flatpaks
+    notify: false # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      install:
+        - com.protonvpn.www
+        - io.github.input_leap.input-leap
+        - it.mijorus.gearlever
+        - org.keepassxc.KeePassXC
+        - org.localsend.localsend_app
+      remove: []
+    user: {} # Also add Flathub user repo, but no user packages
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully

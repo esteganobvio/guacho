@@ -1,0 +1,10 @@
+---
+modules:
+  - type: rpm-ostree
+    install:
+      - sway
+      - swaylock
+      - swayidle
+      - swaybg
+      - waybar
+

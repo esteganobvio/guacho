@@ -1,3 +1,4 @@
+---
 modules:
   - type: containerfile
     snippets:
@@ -35,7 +36,7 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: bling
-    install: 
+    install:
       - rpmfusion
 
   - type: rpm-ostree
