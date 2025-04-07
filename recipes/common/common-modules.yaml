@@ -53,6 +53,8 @@ modules:
       - xfce-polkit
       - tuned
       - tuned-ppd
+      - gnome-keyring
+      - gnome-keyring-pam
       # user tools
       - neovim
       - wezterm
