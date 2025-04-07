@@ -16,7 +16,7 @@ modules:
        # Brave browser
        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
     keys:
-       - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+      - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     install:
       # browser
       - brave-browser
@@ -51,6 +51,9 @@ modules:
       - fzf
       - polkit
       - xfce-polkit
+      - tuned
+      - tuned-ppd
+      - power-profiles-daemon
       # user tools
       - neovim
       - wezterm
