@@ -53,7 +53,6 @@ modules:
       - xfce-polkit
       - tuned
       - tuned-ppd
-      - power-profiles-daemon
       # user tools
       - neovim
       - wezterm
