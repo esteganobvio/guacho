@@ -71,6 +71,21 @@ modules:
       - wl-clipboard
       - clipman
       - wlogout
+      - slurp
+      - grim
+      # file manager
+      - thunar
+      - thunar-archive-plugin
+      - thunar-volman
+      - xarchiver
+      - imv
+      - p7zip
+      - gvfs-mtp
+      - gvfs-gphoto2
+      - gvfs-nfs
+      - gvfs-fuse
+      - gvfs-archive
+      - android-tools
     remove:
       - firefox
       - firefox-langpacks
