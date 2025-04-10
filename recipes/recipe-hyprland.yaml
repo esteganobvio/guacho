@@ -1,6 +1,6 @@
 ---
-name: guacho-sway
-description: Sway Guacho image
+name: guacho-hyprland
+description: Hyprland Guacho image
 base-image: ghcr.io/ublue-os/base-main
 image-version: 41
 
@@ -9,4 +9,4 @@ modules:
   - from-file: common/networking-modules.yaml
   - from-file: common/virt-modules.yaml
   - from-file: common/greetd-modules.yaml
-  - from-file: common/sway-module.yaml
+  - from-file: common/hyprland-module.yaml

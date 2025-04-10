@@ -58,6 +58,7 @@ modules:
       # user tools
       - neovim
       - wezterm
+      - kitty
       - mpv
       - playerctl
       - fastfetch
