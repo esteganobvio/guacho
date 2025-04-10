@@ -1,7 +1,11 @@
 modules:
+  - type: bling
+    install:
+      - negativo17
   - type: rpm-ostree
     install:
       - hyprland
+      - hyprland-devel
       - hypridle
       - hyprlock
       - hyprpaper
