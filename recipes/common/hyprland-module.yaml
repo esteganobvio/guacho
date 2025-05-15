@@ -6,7 +6,6 @@ modules:
     install:
       - hyprland
       - hyprland-devel
-      - hypridle
-      - hyprlock
-      - hyprpaper
+      - hyprcursor
+      - hyprutils
       - waybar
