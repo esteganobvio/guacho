@@ -7,10 +7,6 @@ modules:
 
   - type: rpm-ostree
     repos:
-       # ghostty
-       - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
-       # wezterm
-       - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
        # nerd-fonts fallback
        - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
        # Brave browser
@@ -57,7 +53,6 @@ modules:
       - gnome-keyring-pam
       # user tools
       - neovim
-      - wezterm
       - kitty
       - mpv
       - playerctl
