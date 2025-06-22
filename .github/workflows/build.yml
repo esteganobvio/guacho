@@ -22,9 +22,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe-hyprland.yaml
-          - recipe-hyprland-nvidia.yaml
-          - recipe-sway.yaml
+          - recipe-niri.yaml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image

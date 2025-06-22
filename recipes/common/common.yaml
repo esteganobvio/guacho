@@ -1,0 +1,99 @@
+---
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* into /
+  - type: dnf
+    repos:
+      files:
+        # nerd-fonts fallback
+        - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
+        # wezterm-nightly
+        - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
+        # Brave browser
+        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+      keys:
+        - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+    optfix: # performs symlinking for `/opt/` to allow certain packages to install
+      - brave.com
+    install:
+      skip-unavailable: true # skip unavailable packages
+      install-weak-deps: false
+      packages:
+        - repo: brave-browser
+          packages:
+            - brave-browser
+        # themes and fonts
+        - liberation-fonts-all
+        - nerd-fonts
+        - jetbrains-mono-fonts-all
+        - adw-gtk3-theme
+        - yaru-gtk2-theme
+        - yaru-gtk3-theme
+        - yaru-gtk4-theme
+        - yaru-icon-theme
+        - rsms-inter-fonts
+        - rsms-inter-vf-fonts
+        # system tools
+        - bootc
+        - borgbackup
+        - ddcutil
+        - intel-undervolt
+        - fastfetch
+        - btop
+        - gcc
+        - git-credential-libsecret
+        - lm_sensors
+        - make
+        - usbmuxd
+        - util-linux
+        - zsh
+        - syncthing
+        - openssh-askpass
+        - wireguard-tools
+        - fzf
+        - polkit
+        - xfce-polkit
+        - tuned
+        - tuned-ppd
+        - gnome-keyring
+        - gnome-keyring-pam
+        - gdm
+        # user tools
+        - neovim
+        - wezterm
+        - mpv
+        - playerctl
+        - fastfetch
+        # common gui tools
+        - rofi-wayland
+        - wlr-randr
+        - gammastep
+        - gammastep-indicator
+        - brightnessctl
+        - kanshi
+        - dunst
+        - pavucontrol
+        - wl-clipboard
+        - clipman
+        - wlogout
+        - slurp
+        - grim
+        # file manager
+        - thunar
+        - thunar-archive-plugin
+        - thunar-volman
+        - xarchiver
+        - imv
+        - p7zip
+        - gvfs-mtp
+        - gvfs-gphoto2
+        - gvfs-nfs
+        - gvfs-fuse
+        - gvfs-archive
+        - android-tools
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks

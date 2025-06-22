@@ -1,14 +1,16 @@
 modules:
-  - type: rpm-ostree
+  - type: dnf
     install:
-      - iwd
-      - network-manager-applet
-      - NetworkManager-openvpn
-      - NetworkManager-openvpn-gnome
-      - NetworkManager-openconnect
-      - NetworkManager-openconnect-gnome
-      - bluez
-      - bluez-tools
-      - blueman
-      - firewall-config
+      skip-unavailable: true # skip unavailable packages
+      packages:
+        - iwd
+        - network-manager-applet
+        - NetworkManager-openvpn
+        - NetworkManager-openvpn-gnome
+        - NetworkManager-openconnect
+        - NetworkManager-openconnect-gnome
+        - bluez
+        - bluez-tools
+        - blueman
+        - firewall-config
 
