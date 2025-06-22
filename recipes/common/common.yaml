@@ -61,6 +61,7 @@ modules:
         - gnome-keyring-pam
         - gdm
         - niri
+        - xwayland-satellite
         # user tools
         - neovim
         - wezterm
