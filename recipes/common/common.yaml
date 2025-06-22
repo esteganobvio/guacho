@@ -83,6 +83,7 @@ modules:
         - wlogout
         - slurp
         - grim
+        - keepassxc
         # file manager
         - thunar
         - thunar-archive-plugin
