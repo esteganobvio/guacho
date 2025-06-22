@@ -60,6 +60,7 @@ modules:
         - gnome-keyring
         - gnome-keyring-pam
         - gdm
+        - niri
         # user tools
         - neovim
         - wezterm
