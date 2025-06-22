@@ -84,12 +84,13 @@ modules:
         - slurp
         - grim
         - keepassxc
+        - swaylock
+        - swayidle
         # file manager
-        - thunar
-        - thunar-archive-plugin
-        - thunar-volman
-        - xarchiver
-        - imv
+        - nautilus
+        - file-roller-nautilus
+        - sushi
+        - file-roller
         - p7zip
         - gvfs-mtp
         - gvfs-gphoto2
