@@ -69,6 +69,7 @@ modules:
         - playerctl
         - fastfetch
         # common gui tools
+        - waybar
         - rofi-wayland
         - wlr-randr
         - gammastep
