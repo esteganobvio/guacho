@@ -86,6 +86,7 @@ modules:
         - keepassxc
         - swaylock
         - swayidle
+        - swaybg
         # file manager
         - nautilus
         - file-roller-nautilus
