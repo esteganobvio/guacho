@@ -87,6 +87,7 @@ modules:
         - swaylock
         - swayidle
         - swaybg
+        - fuzzel
         # file manager
         - nautilus
         - file-roller-nautilus
