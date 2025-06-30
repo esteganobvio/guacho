@@ -53,6 +53,7 @@ modules:
         - openssh-askpass
         - wireguard-tools
         - fzf
+        - inotify-tools
         - polkit
         - xfce-polkit
         - tuned
