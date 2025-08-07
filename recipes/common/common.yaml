@@ -13,6 +13,8 @@ modules:
         - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
         # wezterm-nightly
         - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
+      # Ghostty
+        - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
         # Brave browser
         - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
       keys:
@@ -74,6 +76,7 @@ modules:
         # user tools
         - neovim
         - wezterm
+        - ghostty
         - mpv
         - playerctl
         - fastfetch
@@ -97,6 +100,8 @@ modules:
         - swayidle
         - swaybg
         - fuzzel
+        - waypaper
+        - swww
         # file manager
         - nautilus
         - file-roller-nautilus
