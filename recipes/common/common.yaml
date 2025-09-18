@@ -98,7 +98,7 @@ modules:
         - slurp
         - grim
         - keepassxc
-        - swaylock-effetcs
+        - swaylock-effects
         - swayidle
         - swaybg
         - fuzzel
