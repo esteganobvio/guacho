@@ -120,3 +120,5 @@ modules:
       packages:
         - firefox
         - firefox-langpacks
+  - type: brew
+    brew-analytics: false
