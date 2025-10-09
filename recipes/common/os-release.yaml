@@ -4,3 +4,4 @@ modules:
     properties:
       ID: guacho
       NAME: Guacho
+      ID_LIKE: fedora
