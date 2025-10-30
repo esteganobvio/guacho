@@ -15,6 +15,8 @@ modules:
         - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
         # Ghostty
         - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
+        # quickshell
+        - https://copr.fedorainfracloud.org/coprs/errornointernet/quickshell/repo/fedora-%OS_VERSION%/errornointernet-quickshell-fedora-%OS_VERSION%.repo
         # solopasha hyprland copr
         - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
         # Brave browser
@@ -83,27 +85,28 @@ modules:
         - playerctl
         - fastfetch
         # common gui tools
-        - waybar
-        - rofi-wayland
-        - wlr-randr
+        - brightnessctl
+        - clipman
+        - dunst
+        - fuzzel
         - gammastep
         - gammastep-indicator
-        - brightnessctl
-        - kanshi
-        - dunst
-        - pavucontrol
-        - wl-clipboard
-        - clipman
-        - wlogout
-        - slurp
         - grim
+        - kanshi
         - keepassxc
-        - swaylock-effects
-        - swayidle
+        - pavucontrol
+        - quickshell-git
+        - rofi-wayland
+        - slurp
         - swaybg
-        - fuzzel
-        - waypaper
+        - swayidle
+        - swaylock-effects
         - swww
+        - waybar
+        - waypaper
+        - wl-clipboard
+        - wlogout
+        - wlr-randr
         # file manager
         - nautilus
         - file-roller-nautilus
