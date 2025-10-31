@@ -5,3 +5,4 @@ modules:
       ID: guacho
       NAME: Guacho
       ID_LIKE: fedora
+      PRETTY_NAME: Guacho
