@@ -8,10 +8,6 @@ modules:
         - niri
         - xwayland-satellite
         - gdm
-        - nautilus
-        - file-roller-nautilus
-        - sushi
-        - file-roller
   - type: os-release
     properties:
       ID: guacho

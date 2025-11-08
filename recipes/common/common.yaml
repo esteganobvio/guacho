@@ -113,6 +113,10 @@ modules:
         - qt6-qtmultimedia
         - qt6-qt5compat
         # file manager
+        - nautilus
+        - file-roller-nautilus
+        - sushi
+        - file-roller
         - p7zip
         - gvfs-mtp
         - gvfs-gphoto2

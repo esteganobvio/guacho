@@ -9,7 +9,6 @@ modules:
       install-weak-deps: false
       packages:
         - swayfx
-        - thunar
   - type: os-release
     properties:
       ID: guacho
