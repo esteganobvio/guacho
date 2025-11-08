@@ -1,6 +1,9 @@
 ---
 modules:
   - type: dnf
+    repos:
+      files:
+        - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
     install:
       skip-unavailable: true
       install-weak-deps: false
