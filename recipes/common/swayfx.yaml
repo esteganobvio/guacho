@@ -9,6 +9,7 @@ modules:
       install-weak-deps: false
       packages:
         - swayfx
+        - sway-systemd
   - type: os-release
     properties:
       ID: guacho
