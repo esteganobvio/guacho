@@ -1,0 +1,4 @@
+---
+modules:
+  - type: brew
+    brew-analytics: false

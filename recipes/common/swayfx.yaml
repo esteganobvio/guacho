@@ -1,0 +1,15 @@
+---
+modules:
+  - type: dnf
+    install:
+      skip-unavailable: true
+      install-weak-deps: false
+      packages:
+        - swayfx
+        - thunar
+  - type: os-release
+    properties:
+      ID: guacho
+      NAME: Guacho
+      ID_LIKE: fedora
+      PRETTY_NAME: Guacho Swayfx

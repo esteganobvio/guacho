@@ -68,9 +68,11 @@ modules:
         - tuned-ppd
         - gnome-keyring
         - gnome-keyring-pam
-        - gdm
-        - niri
-        - xwayland-satellite
+        - poppler
+        - fd-find
+        - ripgrep
+        - zoxide
+        - jq
         # Docker
         - docker-ce
         - docker-ce-cli
@@ -94,8 +96,6 @@ modules:
         - grim
         - kanshi
         - keepassxc
-        - pavucontrol
-        - rofi-wayland
         - slurp
         - swaybg
         - swayidle
@@ -113,10 +113,6 @@ modules:
         - qt6-qtmultimedia
         - qt6-qt5compat
         # file manager
-        - nautilus
-        - file-roller-nautilus
-        - sushi
-        - file-roller
         - p7zip
         - gvfs-mtp
         - gvfs-gphoto2

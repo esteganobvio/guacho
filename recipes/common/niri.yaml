@@ -1,0 +1,20 @@
+---
+modules:
+  - type: dnf
+    install:
+      skip-unavailable: true
+      install-weak-deps: false
+      packages:
+        - niri
+        - xwayland-satellite
+        - gdm
+        - nautilus
+        - file-roller-nautilus
+        - sushi
+        - file-roller
+  - type: os-release
+    properties:
+      ID: guacho
+      NAME: Guacho
+      ID_LIKE: fedora
+      PRETTY_NAME: Guacho Niri
