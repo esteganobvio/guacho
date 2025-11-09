@@ -96,6 +96,7 @@ modules:
         - grim
         - kanshi
         - keepassxc
+        - nwg-look
         - slurp
         - swaybg
         - swayidle
