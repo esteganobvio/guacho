@@ -125,6 +125,8 @@ modules:
         - gvfs-fuse
         - gvfs-archive
         - android-tools
+        # waydroid
+        - waydroid
     remove:
       packages:
         - firefox
