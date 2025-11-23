@@ -27,7 +27,7 @@ modules:
       - brave.com
     install:
       skip-unavailable: true # skip unavailable packages
-      install-weak-deps: false
+      install-weak-deps: true
       packages:
         - repo: brave-browser
           packages:
