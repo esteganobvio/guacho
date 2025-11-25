@@ -127,6 +127,11 @@ modules:
         - android-tools
         # waydroid
         - waydroid
+        # steam
+        - steam
+        - steam-devices
+        - gamescope
+        - gamemode
     remove:
       packages:
         - firefox
