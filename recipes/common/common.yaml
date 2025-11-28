@@ -73,6 +73,8 @@ modules:
         - ripgrep
         - zoxide
         - jq
+        # ROCm
+        - rocminfo
         # Docker
         - docker-ce
         - docker-ce-cli
