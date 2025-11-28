@@ -75,6 +75,7 @@ modules:
         - jq
         # ROCm
         - rocminfo
+        - rocm-hip
         # Docker
         - docker-ce
         - docker-ce-cli
