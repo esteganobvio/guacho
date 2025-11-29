@@ -73,6 +73,7 @@ modules:
         - ripgrep
         - zoxide
         - jq
+        - openrgb-udev-rules
         # ROCm
         - rocminfo
         - rocm-hip
