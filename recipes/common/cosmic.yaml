@@ -4,4 +4,4 @@ modules:
     group-install:
       with-optional: false
       packages:
-        - cosmic-desktop-environment
+        - cosmic-desktop
