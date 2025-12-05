@@ -147,5 +147,9 @@ modules:
           - com.saivert.pwvucontrol
           - io.github.input_leap.input-leap
           - it.mijorus.gearlever
+          - org.gnome.World.PikaBackup
+          - org.kde.krita
+          - org.onlyoffice.desktopeditors
+          - com.protonvpn.www
   - type: brew
     brew-analytics: false
