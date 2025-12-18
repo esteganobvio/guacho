@@ -2,7 +2,7 @@
 name: guacho-cosmic
 description: Cosmic Guacho Image
 base-image: ghcr.io/ublue-os/base-main
-image-version: 42
+image-version: 43
 
 modules:
   - from-file: common/common.yaml

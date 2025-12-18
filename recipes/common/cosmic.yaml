@@ -5,3 +5,9 @@ modules:
       with-optional: false
       packages:
         - cosmic-desktop
+  - type: os-release
+    properties:
+      ID: guacho
+      NAME: Guacho
+      ID_LIKE: fedora
+      PRETTY_NAME: Guacho Cosmic
