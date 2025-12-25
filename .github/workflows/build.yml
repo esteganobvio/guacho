@@ -23,11 +23,12 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe-niri.yaml
-          - recipe-niri-nvidia.yaml
-          - recipe-swayfx.yaml
-          - recipe-swayfx-nvidia.yaml
-          - recipe-cosmic.yaml
+          - niri.yaml
+          - niri-nvidia.yaml
+          - swayfx.yaml
+          - swayfx-nvidia.yaml
+          - cosmic.yaml
+          - cosmic-nvidia.yaml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image

@@ -9,20 +9,16 @@ modules:
       files:
         # Docker repo
         - https://download.docker.com/linux/fedora/docker-ce.repo
-        # nerd-fonts fallback
-        - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
-        # wezterm-nightly
-        - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
-        # Ghostty
-        - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-%OS_VERSION%/pgdev-ghostty-fedora-%OS_VERSION%.repo
-        # quickshell
-        - https://copr.fedorainfracloud.org/coprs/errornointernet/quickshell/repo/fedora-%OS_VERSION%/errornointernet-quickshell-fedora-%OS_VERSION%.repo
-        # solopasha hyprland copr
-        - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
         # Brave browser
         - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
       keys:
         - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+      copr:
+        - wezfurlong/wezterm-nightly
+        - scottames/ghostty
+        - che/nerd-fonts
+        - errornointernet/quickshell
+        - solopasha/hyprland
     optfix: # performs symlinking for `/opt/` to allow certain packages to install
       - brave.com
     install:

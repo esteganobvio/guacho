@@ -1,7 +1,7 @@
 ---
 name: guacho-niri
 description: Niri Guacho Image
-base-image: ghcr.io/ublue-os/base-main
+base-image: ghcr.io/blue-build/base-images/fedora-base
 image-version: 43
 
 modules:
