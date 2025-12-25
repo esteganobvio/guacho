@@ -1,5 +1,5 @@
 ---
-name: guacho-cosmic
+name: guacho-cosmic-nvidia
 description: Cosmic Guacho Image
 base-image: ghcr.io/blue-build/base-images/fedora-base-nvidia
 image-version: 43
