@@ -9,5 +9,4 @@ modules:
   - from-file: common/niri.yaml
   - from-file: common/networking-modules.yaml
   - from-file: common/virt-modules.yaml
-  - from-file: common/nvidia.yaml
   - from-file: common/brew.yaml
