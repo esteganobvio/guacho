@@ -11,6 +11,8 @@ modules:
         - https://download.docker.com/linux/fedora/docker-ce.repo
         # Brave browser
         - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+        # Tailscale
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       keys:
         - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
       copr:
@@ -117,6 +119,8 @@ modules:
         - gvfs-fuse
         - gvfs-archive
         - android-tools
+        # Tailscale
+        - tailscale
         # waydroid
         - waydroid
         # steam
@@ -133,7 +137,7 @@ modules:
         repo:
           # you can override the title to make inclusion of both system and user repos clearer
           title: Flathub (user)
-      - notify: true
+      - notify: false
         scope: system
         repo:
           title: Flathub (system)
@@ -144,6 +148,7 @@ modules:
           - io.github.input_leap.input-leap
           - it.mijorus.gearlever
           - org.gnome.World.PikaBackup
+          - org.gnome.Weather
           - org.kde.krita
           - org.onlyoffice.desktopeditors
           - com.protonvpn.www
