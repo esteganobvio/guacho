@@ -75,7 +75,7 @@ modules:
         - docker-compose-plugin
         # user tools
         - neovim
-        - wezterm
+        - wezterm-nightly
         - ghostty
         - mpv
         - playerctl
