@@ -7,7 +7,7 @@ modules:
       packages:
         - niri
         - xwayland-satellite
-        - gdm
+  - from-file: common/dms.yaml
   - type: os-release
     properties:
       ID: guacho

@@ -1,0 +1,12 @@
+---
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - avengemedia/dms-git
+        - avengemedia/danklinux
+    install:
+      skip-unavailable: false
+      packages:
+        - dms
+        - dms-greeter
