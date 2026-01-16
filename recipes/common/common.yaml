@@ -21,10 +21,8 @@ modules:
         - che/nerd-fonts
         - errornointernet/quickshell
         - solopasha/hyprland
-    optfix: # performs symlinking for `/opt/` to allow certain packages to install
-      - brave.com
     install:
-      skip-unavailable: true # skip unavailable packages
+      skip-unavailable: false
       install-weak-deps: true
       packages:
         - repo: brave-browser
@@ -75,7 +73,7 @@ modules:
         - docker-compose-plugin
         # user tools
         - neovim
-        - wezterm-nightly
+        - wezterm
         - ghostty
         - mpv
         - playerctl
@@ -124,7 +122,6 @@ modules:
         # waydroid
         - waydroid
         # steam
-        - steam
         - steam-devices
         - gamescope
     remove:
