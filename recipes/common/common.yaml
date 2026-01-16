@@ -99,6 +99,7 @@ modules:
         - wl-clipboard
         - wlogout
         - wlr-randr
+        - xdg-desktop-portal-wlr
         # quickshell
         - quickshell-git
         - qt6-qtsvg
