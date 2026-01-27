@@ -6,7 +6,7 @@ image-version: 43
 
 modules:
   - from-file: common/common.yaml
-  - from-file: common/swayfx.yaml
+  - from-file: common/mangowc.yaml
   - from-file: common/networking-modules.yaml
   - from-file: common/virt-modules.yaml
   - from-file: common/brew.yaml
