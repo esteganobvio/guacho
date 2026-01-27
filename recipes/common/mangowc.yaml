@@ -1,0 +1,18 @@
+---
+modules:
+  - type: dnf
+    repos:
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+    install:
+      skip-unavailable: false
+      install-weak-deps: false
+      packages:
+        - mangowc
+  - from-file: common/dms.yaml
+  - type: os-release
+    properties:
+      ID: guacho
+      NAME: Guacho
+      ID_LIKE: fedora
+      PRETTY_NAME: Guacho MangoWC
