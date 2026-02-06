@@ -12,7 +12,6 @@ modules:
         - sway-systemd
         - xdg-desktop-portal-wlr
         - xdg-desktop-portal-gtk
-  - from-file: common/dms.yaml
   - type: os-release
     properties:
       ID: guacho
