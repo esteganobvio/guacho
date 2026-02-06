@@ -150,5 +150,3 @@ modules:
           - org.kde.krita
           - org.onlyoffice.desktopeditors
           - com.protonvpn.www
-  - type: brew
-    brew-analytics: false
