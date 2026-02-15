@@ -28,7 +28,7 @@ jobs:
           - swayfx.yaml
           - swayfx-nvidia.yaml
           #- mangowc.yaml
-          #- cosmic.yaml
+          - cosmic.yaml
           #- cosmic-nvidia.yaml
     steps:
       # the build is fully handled by the reusable github action
