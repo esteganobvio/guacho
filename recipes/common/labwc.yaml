@@ -1,0 +1,19 @@
+---
+modules:
+  - type: dnf
+    install:
+      skip-unavailable: true
+      install-weak-deps: false
+      packages:
+        - labwc
+        - labwc-session
+        - labwc-tweaks
+        - xdg-desktop-portal-wlr
+        - xdg-desktop-portal-gtk
+  - type: os-release
+    properties:
+      ID: guacho
+      NAME: Guacho
+      ID_LIKE: fedora
+      PRETTY_NAME: Guacho Labwc
+
