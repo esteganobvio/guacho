@@ -1,4 +1,4 @@
-name: bluebuild
+ame: bluebuild
 on:
   schedule:
     - cron:
@@ -28,6 +28,7 @@ jobs:
           - swayfx.yaml
           - swayfx-nvidia.yaml
           - labwc.yaml
+          - labwc-nvidia.yaml
           #- mangowc.yaml
           #- cosmic.yaml
           #- cosmic-nvidia.yaml
