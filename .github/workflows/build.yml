@@ -1,4 +1,4 @@
-ame: bluebuild
+name: bluebuild
 on:
   schedule:
     - cron:
