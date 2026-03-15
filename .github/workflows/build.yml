@@ -23,8 +23,8 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          #- niri.yaml
-          #- niri-nvidia.yaml
+          - niri.yaml
+          - niri-nvidia.yaml
           - swayfx.yaml
           - swayfx-nvidia.yaml
           - labwc.yaml
