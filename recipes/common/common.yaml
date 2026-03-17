@@ -126,6 +126,11 @@ modules:
         # steam
         - steam-devices
         - gamescope
+        # greetd
+        - greetd
+        - greetd-selinux
+        - gtkgreet
+        - cage
     remove:
       packages:
         - firefox
