@@ -1,0 +1,12 @@
+---
+name: guacho-hyprland
+description: Hyprland Guacho Image
+base-image: ghcr.io/blue-build/base-images/fedora-base
+image-version: 43
+
+modules:
+  - from-file: common/common.yaml
+  - from-file: common/hyprland.yaml
+  - from-file: common/networking-modules.yaml
+  - from-file: common/virt-modules.yaml
+  - from-file: common/brew.yaml
