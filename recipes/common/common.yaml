@@ -21,6 +21,7 @@ modules:
         - che/nerd-fonts
         - errornointernet/quickshell
         - solopasha/hyprland
+        - erikreider/swayosd
     install:
       skip-unavailable: false
       install-weak-deps: true
@@ -100,6 +101,7 @@ modules:
         - wlogout
         - wlr-randr
         - xdg-desktop-portal-wlr
+        - swayosd
         # quickshell
         - quickshell-git
         - qt6-qtsvg
