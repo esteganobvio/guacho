@@ -63,6 +63,7 @@ modules:
         - ripgrep
         - zoxide
         - openrgb-udev-rules
+        - system-config-printer
         # ROCm
         - rocminfo
         - rocm-hip
