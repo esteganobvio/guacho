@@ -64,9 +64,6 @@ modules:
         - zoxide
         - openrgb-udev-rules
         - system-config-printer
-        # ROCm
-        - rocminfo
-        - rocm-hip
         # Docker
         - docker-ce
         - docker-ce-cli
@@ -103,6 +100,7 @@ modules:
         - wlr-randr
         - xdg-desktop-portal-wlr
         - swayosd
+        - deskflow
         # quickshell
         - quickshell-git
         - qt6-qtsvg
