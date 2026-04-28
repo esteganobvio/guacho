@@ -4,6 +4,18 @@ See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup i
 
 After setup, it is recommended you update this README to describe your custom image.
 
+## Available Images
+
+- `hyprland` (enabled)
+- `labwc` (enabled)
+- `labwc-nvidia` (enabled)
+- `swayfx` (enabled)
+- `swayfx-nvidia` (enabled)
+- `cosmic`
+- `cosmic-nvidia`
+- `niri` (enabled)
+- `niri-nvidia` (enabled)
+
 ## Installation
 
 > **Warning**  

@@ -10,7 +10,6 @@ modules:
         - hyprland-devel
         - hypridle
         - hyprlock
-        - hyprnome
   - type: os-release
     properties:
       ID: guacho

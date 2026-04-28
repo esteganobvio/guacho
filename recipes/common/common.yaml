@@ -9,26 +9,18 @@ modules:
       files:
         # Docker repo
         - https://download.docker.com/linux/fedora/docker-ce.repo
-        # Brave browser
-        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
         # Tailscale
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-      keys:
-        - https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
       copr:
-        - wezfurlong/wezterm-nightly
         - scottames/ghostty
         - che/nerd-fonts
         - errornointernet/quickshell
         - solopasha/hyprland
         - erikreider/swayosd
     install:
-      skip-unavailable: false
-      install-weak-deps: true
+      skip-unavailable: true
+      install-weak-deps: false
       packages:
-        - repo: brave-browser
-          packages:
-            - brave-browser
         # themes and fonts
         - liberation-fonts-all
         - nerd-fonts
@@ -72,11 +64,9 @@ modules:
         - docker-compose-plugin
         # user tools
         - neovim
-        - wezterm
         - ghostty
         - mpv
         - playerctl
-        - fastfetch
         # common gui tools
         - brightnessctl
         - clipman
@@ -98,7 +88,6 @@ modules:
         - wl-clipboard
         - wlogout
         - wlr-randr
-        - xdg-desktop-portal-wlr
         - swayosd
         - deskflow
         # quickshell
@@ -150,10 +139,10 @@ modules:
           - com.github.tchx84.Flatseal
           - io.github.flattool.Warehouse
           - com.saivert.pwvucontrol
-          - io.github.input_leap.input-leap
           - it.mijorus.gearlever
           - org.gnome.World.PikaBackup
           - org.gnome.Weather
-          - org.kde.krita
           - org.onlyoffice.desktopeditors
           - com.protonvpn.www
+          - org.keepassxc.KeePassXC
+          - com.brave.Browser
