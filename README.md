@@ -1,54 +1,45 @@
-# guacho &nbsp; [![bluebuild build badge](https://github.com/esteganobvio/guacho/actions/workflows/build.yml/badge.svg)](https://github.com/esteganobvio/guacho/actions/workflows/build.yml)
+# Guacho
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+Guacho is a set of customizable Fedora OSTree images built using [BlueBuild](https://blue-build.org/).
 
 ## Available Images
 
-- `hyprland` (enabled)
-- `labwc` (enabled)
-- `labwc-nvidia` (enabled)
-- `swayfx` (enabled)
-- `swayfx-nvidia` (enabled)
-- `cosmic`
-- `cosmic-nvidia`
-- `niri` (enabled)
-- `niri-nvidia` (enabled)
+The following images are currently actively built via GitHub Actions:
+
+- `niri`
+- `niri-nvidia`
+
+Other planned images include `hyprland`, `swayfx`, `labwc`, and `cosmic`.
 
 ## Installation
 
 > **Warning**  
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
-To rebase an existing atomic Fedora installation to the latest build:
+To rebase an existing atomic Fedora installation to the latest Guacho build:
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/esteganobvio/guacho-sway:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/esteganobvio/guacho-sway:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+1. Rebase to the unsigned image to install signing keys and policies:
+   ```bash
+   rpm-ostree rebase ostree-unverified-registry:ghcr.io/esteganobvio/guacho-niri:latest
+   ```
+2. Reboot:
+   ```bash
+   systemctl reboot
+   ```
+3. Rebase to the signed image:
+   ```bash
+   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/esteganobvio/guacho-niri:latest
+   ```
+4. Reboot again to complete the installation:
+   ```bash
+   systemctl reboot
+   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
-
-## ISO
-
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+The `latest` tag always points to the most recent build for the version specified in the recipes.
 
 ## Verification
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repository and running:
 
 ```bash
 cosign verify --key cosign.pub ghcr.io/esteganobvio/guacho

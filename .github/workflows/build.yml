@@ -25,6 +25,7 @@ jobs:
           # !! Add your recipes here
           - niri.yaml
           - niri-nvidia.yaml
+          - niri44.yaml
           #- swayfx.yaml
           #- swayfx-nvidia.yaml
           #- labwc.yaml
