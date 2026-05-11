@@ -8,6 +8,10 @@ modules:
         - niri
         - xwayland-satellite
         - xdg-desktop-portal-gnome
+  - type: files
+    files:
+      - source: niri/greetd
+        destination: /etc/greetd
   - type: os-release
     properties:
       ID: guacho

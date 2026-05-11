@@ -1,0 +1,18 @@
+input {
+  keyboard {
+    track-layout "global"
+    xkb {}
+    numlock
+  }
+}
+
+hotkey-overlay {
+  skip-at-startup
+}
+
+environment {
+    GTK_USE_PORTAL "0"
+    GDK_DEBUG "no-portals"
+    GTK_THEME "Yaru-blue-dark"
+}
+spawn-at-startup "sh" "-c" "gtkgreet -l -c niri-session; niri msg action quit -s"
