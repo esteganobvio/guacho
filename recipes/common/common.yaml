@@ -107,6 +107,8 @@ modules:
         - gvfs-fuse
         - gvfs-archive
         - android-tools
+        # amd
+        - rocm-smi
         # Tailscale
         - tailscale
         # waydroid
