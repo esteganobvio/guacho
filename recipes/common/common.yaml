@@ -16,7 +16,8 @@ modules:
         - che/nerd-fonts
         - errornointernet/quickshell
         - solopasha/hyprland
-        - erikreider/swayosd
+        - name: erikreider/swayosd
+          chroot: fedora-43-x86_64
     install:
       skip-unavailable: true
       install-weak-deps: false
@@ -97,6 +98,15 @@ modules:
         - unixODBC
         # file manager
         - nautilus
+        - glycin-thumbnailer # [ESENCIAL] reemplaza a gdk-pixbuf2 en GNOME 49+ para thumbnails de imágenes (jpg, png, webp, avif)
+        - ffmpegthumbnailer # thumbnails de video
+        - evince-thumbnailer # thumbnails de PDF/documentos
+        - gnome-epub-thumbnailer # thumbnails de EPUB
+        - gnome-kra-ora-thumbnailer # thumbnails de Krita/ORA
+        - gnome-directory-thumbnailer # thumbnails de directorios
+        - libheif # thumbnails HEIC/HEIF (fotos iPhone/cámaras)
+        - libopenraw # thumbnails RAW (CR2, NEF, DNG, etc.)
+        - gstreamer1-plugin-libav # codecs extra para video thumbnails
         - file-roller-nautilus
         - sushi
         - file-roller

@@ -1,8 +1,10 @@
 ---
-name: guacho-niri
+name: guacho-niri-gts
 description: Niri Guacho Image
+alt-tags:
+  - gts
 base-image: ghcr.io/blue-build/base-images/fedora-base
-image-version: 44
+image-version: gts
 
 modules:
   - from-file: common/common.yaml
