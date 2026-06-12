@@ -76,7 +76,6 @@ modules:
         - gammastep-indicator
         - grim
         - kanshi
-        - keepassxc
         - nwg-look
         - slurp
         - swaybg
