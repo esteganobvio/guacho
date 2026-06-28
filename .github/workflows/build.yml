@@ -31,7 +31,7 @@ jobs:
           #- swayfx-nvidia.yaml
           #- labwc.yaml
           #- labwc-nvidia.yaml
-          #- hyprland.yaml
+          - hyprland.yaml
           #- mangowc.yaml
           #- cosmic.yaml
           #- cosmic-nvidia.yaml

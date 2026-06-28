@@ -15,7 +15,7 @@ modules:
         - scottames/ghostty
         - che/nerd-fonts
         - errornointernet/quickshell
-        - solopasha/hyprland
+        - lionheartp/Hyprland
         - name: erikreider/swayosd
           chroot: fedora-43-x86_64
     install:
