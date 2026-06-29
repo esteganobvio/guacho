@@ -3,13 +3,18 @@ modules:
   - type: dnf
     install:
       skip-unavailable: true
-      install-weak-deps: false
+      install-weak-deps: true
       packages:
-        - hyprland
-        - hyprland-plugins
-        - hyprland-devel
-        - hypridle
+        - hyprland-git
+        - hyprland-plugins-git
+        - hyprland-guiutils
+        - hyprpaper
         - hyprlock
+        - hyprpolkitagent
+        - hyprpwcenter
+        - hyprshot
+        - hyprsunset
+        - hypridle
   - type: os-release
     properties:
       ID: guacho

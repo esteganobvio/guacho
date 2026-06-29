@@ -16,8 +16,7 @@ modules:
         - che/nerd-fonts
         - errornointernet/quickshell
         - lionheartp/Hyprland
-        - name: erikreider/swayosd
-          chroot: fedora-43-x86_64
+        - erikreider/swayosd
     install:
       skip-unavailable: true
       install-weak-deps: false
