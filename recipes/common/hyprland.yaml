@@ -3,7 +3,7 @@ modules:
   - type: dnf
     install:
       skip-unavailable: true
-      install-weak-deps: true
+      install-weak-deps: false
       packages:
         - hyprland-git
         - hyprland-plugins-git
