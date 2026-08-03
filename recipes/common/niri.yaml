@@ -8,8 +8,6 @@ modules:
         - niri
         - xwayland-satellite
         - xdg-desktop-portal-gnome
-        - noctalia-git
-        - noctalia-greeter
   - type: files
     files:
       - source: niri/greetd

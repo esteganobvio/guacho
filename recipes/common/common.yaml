@@ -87,6 +87,9 @@ modules:
         - wlogout
         - wlr-randr
         - swayosd
+        # noctalia
+        - noctalia-git
+        - noctalia-greeter
         # quickshell
         - quickshell-git
         - qt6-qtsvg
