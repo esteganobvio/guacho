@@ -15,8 +15,6 @@ modules:
         - hyprshot
         - hyprsunset
         - hypridle
-        - noctalia-greeter
-        - noctalia-shell-v5
   - type: os-release
     properties:
       ID: guacho
