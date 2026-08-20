@@ -15,6 +15,7 @@ modules:
         - hyprshot
         - hyprsunset
         - hypridle
+        - xdg-desktop-portal-hyprland
   - type: os-release
     properties:
       ID: guacho
