@@ -11,8 +11,6 @@ modules:
         - https://download.docker.com/linux/fedora/docker-ce.repo
         # Tailscale
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-        # Brave Browser
-        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
       copr:
         - scottames/ghostty
         - che/nerd-fonts
@@ -134,8 +132,6 @@ modules:
         - greetd-selinux
         - gtkgreet
         - cage
-        # brave
-        - brave-browser
     remove:
       packages:
         - firefox
