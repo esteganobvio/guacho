@@ -9,8 +9,6 @@ The following images are currently actively built via GitHub Actions:
 - `niri`
 - `niri-nvidia`
 
-Other planned images include `hyprland`, `swayfx`, `labwc`, and `cosmic`.
-
 ## Installation
 
 > **Warning**  
