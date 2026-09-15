@@ -14,9 +14,8 @@ modules:
       copr:
         - scottames/ghostty
         - che/nerd-fonts
-        - errornointernet/quickshell
         - lionheartp/Hyprland
-        - erikreider/swayosd
+        - killcrb/ashell
     install:
       skip-unavailable: true
       install-weak-deps: false
@@ -86,17 +85,11 @@ modules:
         - wl-clipboard
         - wlogout
         - wlr-randr
-        - swayosd
         # noctalia
         - noctalia-git
         - noctalia-greeter
-        # quickshell
-        - quickshell-git
-        - qt6-qtsvg
-        - qt6-qtimageformats
-        - qt6-qtmultimedia
-        - qt6-qt5compat
-        - unixODBC
+        # ashell
+        - ashell
         # file manager
         - nautilus
         - glycin-thumbnailer # [ESENCIAL] reemplaza a gdk-pixbuf2 en GNOME 49+ para thumbnails de imágenes (jpg, png, webp, avif)

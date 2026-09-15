@@ -7,7 +7,8 @@ Guacho is a set of customizable Fedora OSTree images built using [BlueBuild](htt
 The following images are currently actively built via GitHub Actions:
 
 - `niri`
-- `niri-nvidia`
+- `labwc`
+- `swayfx` 
 
 ## Installation
 
