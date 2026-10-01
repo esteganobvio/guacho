@@ -6,11 +6,8 @@ vt = 1
 # The default session, also known as the greeter.
 [default_session]
 
-# `agreety` is the bundled agetty/login-lookalike. You can replace `/bin/sh`
-# with whatever you want started, such as `sway`.
-#command = "sway --config /etc/greetd/sway-config"
-#command = "cage -m last -s -- gtkgreet -l -c 'niri-session'"
-command = "niri -c /etc/greetd/niri.kdl"
+# Noctalia greeter auto-detects the desktop sessions installed on the system.
+command = "/usr/bin/noctalia-greeter-session"
 # The user to run the command as. The privileges this user must have depends
 # on the greeter. A graphical greeter may for example require the user to be
 # in the `video` group.

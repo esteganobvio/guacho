@@ -5,9 +5,9 @@ modules:
       skip-unavailable: true
       install-weak-deps: false
       packages:
-        - labwc
-        - labwc-session
-        - labwc-tweaks
+        - sway
+        - sway-config-upstream
+        - sway-systemd
         - xdg-desktop-portal-wlr
         - xdg-desktop-portal-gtk
   - type: os-release
@@ -15,5 +15,4 @@ modules:
       ID: guacho
       NAME: Guacho
       ID_LIKE: fedora
-      PRETTY_NAME: Guacho Labwc
-
+      PRETTY_NAME: Guacho Sway

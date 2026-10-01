@@ -15,7 +15,7 @@
 *   `recipes/*.yaml`: Environment definitions (Keep < 50 lines; use YAML anchors).
 *   `modules/`: Build modules (scripts).
 *   `files/`: System configurations (e.g., `files/system/usr/...`).
-*   **Naming**: Use kebab-case for files/modules. GPU variants use `-nvidia` suffix (e.g., `swayfx-nvidia.yaml`).
+*   **Naming**: Use kebab-case for files/modules. GPU variants use `-nvidia` suffix (e.g., `sway-nvidia.yaml`).
 *   **Shell Scripts**: Use `#!/usr/bin/env bash` with `set -euo pipefail`. Always quote variables.
 *   **Scripts**: Nushell (`.nu`) is the preferred scripting language for modules.
 *   **YAML**: Use kebab-case for module names; 2-space indentation.

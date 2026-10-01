@@ -15,7 +15,6 @@ modules:
         - scottames/ghostty
         - che/nerd-fonts
         - lionheartp/Hyprland
-        - killcrb/ashell
     install:
       skip-unavailable: true
       install-weak-deps: false
