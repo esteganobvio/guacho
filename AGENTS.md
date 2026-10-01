@@ -1,27 +1,28 @@
 # Guacho Agent Instructions
 
-## 🛠️ Core Workflow & Build
-*   **Primary Focus**: Updating `recipes/*.yaml` and `files/` system configurations for BlueBuild (Fedora OSTree images).
-*   **Build Trigger**: Changes to `recipes/*.yaml` trigger GitHub Actions.
-*   **Local Dev**: Use `bash bluebuild.sh --recipe <recipe_name> --verbose` (local setup required).
-*   **Image Verification**: `cosign verify --key cosign.pub ghcr.io/esteganobvio/guacho`
-*   **Manual Rebase**: Follow this strict 4-step sequence:
-    1.  `rpm-ostree rebase ostree-unverified-registry:ghcr.io/esteganobvio/guacho-sway:latest`
-    2.  `systemctl reboot`
-    3.  `rpm-ostree rebase ostree-image-signed:docker://ghcr.io/esteganobvio/guacho-sway:latest`
-    4.  `systemctl reboot`
+Fedora OSTree images built with [BlueBuild](https://blue-build.org/). The repo is YAML recipes + shipped config files; there is no application code to test.
 
-## 📁 Structure & Conventions
-*   `recipes/*.yaml`: Environment definitions (Keep < 50 lines; use YAML anchors).
-*   `modules/`: Build modules (scripts).
-*   `files/`: System configurations (e.g., `files/system/usr/...`).
-*   **Naming**: Use kebab-case for files/modules. GPU variants use `-nvidia` suffix (e.g., `sway-nvidia.yaml`).
-*   **Shell Scripts**: Use `#!/usr/bin/env bash` with `set -euo pipefail`. Always quote variables.
-*   **Scripts**: Nushell (`.nu`) is the preferred scripting language for modules.
-*   **YAML**: Use kebab-case for module names; 2-space indentation.
-*   **Commits**: Use conventional commits (`feat:`, `fix:`, `chore:`, etc.).
+## Build commands
+- Validate a recipe first: `bluebuild validate recipes/<recipe>.yaml`
+- Local build: `bluebuild build recipes/<recipe>.yaml --verbose` (requires docker)
+- Rebase this machine onto the local build: `bluebuild switch`
+- CI: pushing non-`.md` files triggers `.github/workflows/build.yml`. **The `recipe:` matrix in that file is the only list of built images — commented entries are disabled. Any new recipe must be added to the matrix or it will never build.**
+- `image-version` in a recipe becomes the image tags (`:latest`, `:<version>`, `:<date>`, `:<date>-<version>`).
 
-## ⚠️ Critical Constraints
-*   **No Rebooting Packages**: Never add packages in recipes that require a reboot.
-*   **Error Handling**: Always check for file existence before processing in scripts.
-*   **Secrets**: Never commit secrets or credentials.
+## Structure
+- `recipes/<name>.yaml` — one image per file. The `name:` field (e.g. `guacho-sway`) is the ghcr image name: `ghcr.io/esteganobvio/guacho-sway`.
+- `recipes/common/<compositor>.yaml` — shared module bundles (dnf packages, os-release) included by every variant of that compositor via `from-file`.
+- `files/system/**` — copied into `/` of every image by `common/common.yaml`, so anything under `files/system/etc/...` is global config (greetd lives at `files/system/etc/greetd/config.toml`).
+- Base images: `ghcr.io/blue-build/base-images/fedora-base` (and `-nvidia` for GPU variants).
+- `modules/` is currently empty; recipes use BlueBuild built-in modules only.
+- Conventions: kebab-case filenames, `-nvidia` suffix for GPU variants, keep recipes under ~50 lines, conventional commits.
+
+## Gotchas (verified)
+- `skip-unavailable: true` in dnf modules **silently skips packages that are not installed** — a typo'd or unavailable package name will not fail the build. Check the built image to confirm packages actually landed.
+- greetd runs `noctalia-greeter-session` with session auto-detection; the picker only lists `.desktop` entries in `/usr/share/wayland-sessions/`. E.g. `sway.desktop` ships only in the `sway-config-upstream` subpackage (plain `sway` pulls `sway-config`, which has no desktop entry), so `common/sway.yaml` must keep `sway-config-upstream`.
+- The `greetd` user is created by the Fedora `greetd` package (sysusers); keep `user = "greetd"` in the greetd config.
+- Verify a published image: `cosign verify --key cosign.pub ghcr.io/esteganobvio/guacho-sway:latest`. `cosign.key` is gitignored — never commit signing secrets.
+- Never add packages that require a reboot to recipes.
+
+## Manual rebase (existing hardware)
+See README for the full sequence: rebase to the **unsigned** image (`ostree-unverified-registry:ghcr.io/esteganobvio/<image>:latest`), reboot, rebase to the **signed** image (`ostree-image-signed:docker://ghcr.io/esteganobvio/<image>:latest`), reboot.
