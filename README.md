@@ -35,6 +35,9 @@ To rebase an existing atomic Fedora installation to the latest Guacho build:
 
 The `latest` tag always points to the most recent build for the version specified in the recipes.
 
+> **Note**
+> Images are published as chunked OCI images, so updates between builds only download the chunks that actually changed. The move from the last pre-chunking build to the first chunked build requires a one-time full rebase (~3.7 GB); every update after that is incremental.
+
 ## Verification
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repository and running:

@@ -5,6 +5,7 @@ Fedora OSTree images built with [BlueBuild](https://blue-build.org/). The repo i
 ## Build commands
 - Validate a recipe first: `bluebuild validate recipes/<recipe>.yaml`
 - Local build: `bluebuild build recipes/<recipe>.yaml --verbose` (requires docker)
+- Local chunked build (matches CI's `build_chunked_oci: true`): `bluebuild build --build-chunked-oci recipes/<recipe>.yaml`
 - Rebase this machine onto the local build: `bluebuild switch`
 - CI: pushing non-`.md` files triggers `.github/workflows/build.yml`. **The `recipe:` matrix in that file is the only list of built images — commented entries are disabled. Any new recipe must be added to the matrix or it will never build.**
 - `image-version` in a recipe becomes the image tags (`:latest`, `:<version>`, `:<date>`, `:<date>-<version>`).
