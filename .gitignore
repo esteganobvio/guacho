@@ -1,6 +1,9 @@
 cosign.key
 cosign.private
 /Containerfile
+/openspec
+/.claude
 *.iso
 *.iso-CHECKSUM
 /.bluebuild-scripts_*
+.opencode/
