@@ -8,6 +8,7 @@ The following images are currently actively built via GitHub Actions:
 
 - `niri`
 - `sway`
+- `cosmic`
 
 ## Installation
 

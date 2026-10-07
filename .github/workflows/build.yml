@@ -28,6 +28,7 @@ jobs:
           #- niri-gts.yaml
           #- niri-gts-nvidia.yaml
           - sway.yaml
+          - cosmic.yaml
           #- sway-nvidia.yaml
           #- hyprland.yaml
     steps:
