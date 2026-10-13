@@ -1,15 +1,15 @@
 ---
 modules:
   - type: dnf
+    repos:
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     install:
-      skip-unavailable: true
+      skip-unavailable: false
       install-weak-deps: false
       packages:
-        - sway
-        - sway-config-upstream
-        - sway-systemd
+        - swayfx
         - xdg-desktop-portal-wlr
-        - xdg-desktop-portal-gtk
   - type: os-release
     properties:
       ID: guacho
