@@ -9,6 +9,7 @@ modules:
       install-weak-deps: false
       packages:
         - swayfx
+        - sway-systemd
         - xdg-desktop-portal-wlr
   - type: os-release
     properties:

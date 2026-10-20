@@ -16,15 +16,15 @@ modules:
         - che/nerd-fonts
         - lionheartp/Hyprland
     install:
-      skip-unavailable: true
+      skip-unavailable: false
       install-weak-deps: false
       packages:
         # themes and fonts
         - liberation-fonts-all
         - nerd-fonts
         - jetbrains-mono-fonts-all
+        - qt6ct
         - adw-gtk3-theme
-        - yaru-gtk2-theme
         - yaru-gtk3-theme
         - yaru-gtk4-theme
         - yaru-icon-theme
@@ -35,7 +35,6 @@ modules:
         - ddcutil
         - intel-undervolt
         - fastfetch
-        - btop
         - gcc
         - git-credential-libsecret
         - lm_sensors
@@ -44,7 +43,6 @@ modules:
         - syncthing
         - openssh-askpass
         - inotify-tools
-        - xfce-polkit
         - tuned
         - tuned-ppd
         - gnome-keyring
@@ -67,10 +65,7 @@ modules:
         # common gui tools
         - brightnessctl
         - clipman
-        - dunst
         - fuzzel
-        - gammastep
-        - gammastep-indicator
         - grim
         - kanshi
         - nwg-look
@@ -79,16 +74,11 @@ modules:
         - swayidle
         - swaylock-effects
         - swww
-        - waybar
-        - waypaper
         - wl-clipboard
-        - wlogout
         - wlr-randr
         # noctalia
         - noctalia-git
         - noctalia-greeter
-        # ashell
-        - ashell
         # file manager
         - nautilus
         - glycin-thumbnailer # [ESENCIAL] reemplaza a gdk-pixbuf2 en GNOME 49+ para thumbnails de imágenes (jpg, png, webp, avif)
@@ -103,7 +93,7 @@ modules:
         - file-roller-nautilus
         - sushi
         - file-roller
-        - p7zip
+        - 7zip
         - gvfs-mtp
         - gvfs-gphoto2
         - gvfs-nfs
@@ -114,16 +104,12 @@ modules:
         - rocm-smi
         # Tailscale
         - tailscale
-        # waydroid
-        - waydroid
         # steam
         - steam-devices
         - gamescope
         # greetd
         - greetd
         - greetd-selinux
-        - gtkgreet
-        - cage
     remove:
       packages:
         - firefox
