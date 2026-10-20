@@ -11,6 +11,8 @@ modules:
         - https://download.docker.com/linux/fedora/docker-ce.repo
         # Tailscale
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+        # Terra repo (swaylock-effects, swww, noctalia-greeter)
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - scottames/ghostty
         - che/nerd-fonts
