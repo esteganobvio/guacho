@@ -25,6 +25,7 @@ modules:
         - liberation-fonts-all
         - nerd-fonts
         - jetbrains-mono-fonts-all
+        - fontawesome-fonts-all
         - qt6ct
         - adw-gtk3-theme
         - yaru-gtk3-theme
