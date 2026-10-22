@@ -79,6 +79,7 @@ modules:
         - swww
         - wl-clipboard
         - wlr-randr
+        - wayvnc
         # noctalia
         - noctalia-git
         - noctalia-greeter
