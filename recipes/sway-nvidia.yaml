@@ -2,7 +2,7 @@
 name: guacho-sway-nvidia
 description: Sway Guacho Image
 base-image: ghcr.io/blue-build/base-images/fedora-base-nvidia
-image-version: 43
+image-version: 45
 
 modules:
   - from-file: common/common.yaml
