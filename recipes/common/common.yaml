@@ -11,7 +11,7 @@ modules:
         - https://download.docker.com/linux/fedora/docker-ce.repo
         # Tailscale
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-        # Terra repo (swaylock-effects, swww, noctalia-greeter)
+        # Terra repo (swaylock-effects, noctalia)
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       copr:
         - scottames/ghostty
@@ -76,7 +76,6 @@ modules:
         - swaybg
         - swayidle
         - swaylock-effects
-        - swww
         - wl-clipboard
         - wlr-randr
         - wayvnc
@@ -102,7 +101,6 @@ modules:
         - gvfs-gphoto2
         - gvfs-nfs
         - gvfs-fuse
-        - gvfs-archive
         - android-tools
         # amd
         - rocm-smi
